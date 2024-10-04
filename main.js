@@ -74,6 +74,8 @@ const openThemeMode = () => {
 const closeThemeMode = (T) => {
     if (T.target.classList.contains("customize-theme")) {
         themeMode.style.display = "none";
+        document.querySelector(".menu-item:first-child").classList.add("active")
+        document.querySelector("#theme").classList.remove("active")
     }
 };
 theme.addEventListener("click", openThemeMode);
